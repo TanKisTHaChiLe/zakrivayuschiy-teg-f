@@ -13,4 +13,119 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  padding-block: 100px;
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: var(--weight-text);
+}
+
+.header {
+  margin-inline: auto;
+  margin-block-end: 100px;
+  padding-block: clamp(7.5rem, 3.5122rem + 19.5122vw, 8rem);
+  inline-size: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
+  text-align: center;
+  border: 2px solid #000000;
+}
+
+.header_title {
+  font-family: var(--accent-font), fanatsy;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  margin-block-end: 20px;
+}
+
+.header_subtitle {
+  font-family: var(--accent-font), fantasy;
+  font-size: clamp(0.875rem, 0.6549rem + 0.939vw, 1.5rem);
+  line-height: clamp(0.875rem, 0.6549rem + 0.939vw, 1.5rem);
+}
+
+.section {
+  margin-inline: auto;
+  inline-size: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
+  margin-block-end: 50px;
+}
+
+.section_title {
+  padding: 4.3px 10px;
+  border: 2px solid #000;
+  font-weight: var(--weight-title);
+  font-size: 18px;
+  line-height: 21.78px;
+}
+
+.card_label {
+  position: relative;
+}
+
+.label_text {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--accent-font), fantasy;
+  font-size: 14px;
+  line-height: 14px;
+  opacity: 50%;
+  background-blend-mode: hard-light;
+  text-shadow: -1px 0 var(--outline-label-color),
+    0 1px var(--outline-label-color), 1px 0 var(--outline-label-color),
+    0 -1px var(--outline-label-color);
+}
+
+@supports (
+  (text-stroke: 1px var(--outline-label-color)) or
+    (-webkit-text-stroke: 1px var(--outline-label-color))
+) {
+  .label_text {
+    -webkit-text-stroke: 1px var(--outline-label-color);
+    text-stroke: 1px var(--outline-label-color);
+    text-shadow: none;
+  }
+}
+
+.card_image {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-inline:2px solid #000;
+  width: 100%;
+}
+
+.card_content_container {
+  padding: 25px;
+  border: 2px solid #000;
+
+}
+
+.card_text_container > .card_text:last-of-type {
+  margin-block-end: 25px;
+}
+
+.card_text {
+  margin-block-end: 27px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.button_container {
+  display: flex;
+  margin-left: auto;
+  inline-size: fit-content;
+  block-size: fit-content;
+}
+
+.card__icon-button {
+  border: none;
+  background: none;
+  height:36px;
+}
+
+.card__like-button {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 12.6px;
+  border: 2px solid #000;
+  background: none;
+  padding: 11px 35px;
+  font-size: 14px;
+  line-height: 12.6px;
 }

@@ -135,18 +135,17 @@
   border: 2px solid #000;
   background: none;
   font-size: 14px;
-  line-height: 12.6px;
+  font-family: var(--accent-font), fantasy;
 }
 
 .button__text {
   font-family: var(--accent-font), fantasy;
   margin: auto;
   font-size: 14px;
-  line-height: 12.6px;
 }
 
 .card__like-button {
-  padding: 13px 35px 7px;
+  padding: 10.25px 35px;
 }
 
 /* <---------- image_filter -----------> */
@@ -240,7 +239,7 @@
 @media(width<=375px){
   .header {
     inline-size: 100%;
-   padding-block: 120px;
+    padding-block: 120px;
   }
   .section {
     inline-size: 100%;

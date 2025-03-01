@@ -164,7 +164,6 @@
 
 .button__text {
   position: relative;
-  font-family: var(--accent-font), fantasy;
   margin: auto;
   font-size: 14px;
   mix-blend-mode: difference;

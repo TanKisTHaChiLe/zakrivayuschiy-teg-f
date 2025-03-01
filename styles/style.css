@@ -15,7 +15,7 @@
   min-block-size: 100dvb;
   padding-block: 100px;
   font-family: var(--main-font), sans-serif;
-  font-variation-settings: var(--weight-text);
+  font-variation-settings: "wght" var(--weight-text);
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: center;
@@ -259,10 +259,9 @@
 /* <---------- dialog ----------> */
 
 .dialog[open] {
-  min-inline-size: clamp(21.313rem, 1.502vw + 20.96rem, 22.313rem);
+  min-inline-size: 21.313rem;
   inline-size: clamp(21.313rem, 1.502vw + 20.96rem, 22.313rem);
   padding: 29.5px 30.5px 28.5px 29.5px;
-  border: none;
   border: var(--border);
 }
 

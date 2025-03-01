@@ -16,7 +16,14 @@
   padding-block: 100px;
   font-family: var(--main-font), sans-serif;
   font-variation-settings: var(--weight-text);
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
+
+/* <---------- header ----------> */
 
 .header {
   margin-inline: auto;
@@ -25,6 +32,7 @@
   inline-size: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
   text-align: center;
   border: 2px solid #000000;
+  background-color: #fff;
 }
 
 .header_title {
@@ -35,14 +43,18 @@
 
 .header_subtitle {
   font-family: var(--accent-font), fantasy;
-  font-size: clamp(0.875rem, 0.6549rem + 0.939vw, 1.5rem);
-  line-height: clamp(0.875rem, 0.6549rem + 0.939vw, 1.5rem);
+  font-size: clamp(0.875rem, 0.845vw + 0.677rem, 1.438rem);
+  line-height: clamp(0.875rem, 0.845vw + 0.677rem, 1.438rem);
+  text-transform: uppercase;
 }
+
+/* <---------- section ----------> */
 
 .section {
   margin-inline: auto;
   inline-size: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
   margin-block-end: 50px;
+  background-color: #fff;
 }
 
 .section_title {
@@ -55,6 +67,7 @@
 
 .card_label {
   position: relative;
+  border-inline: 2px solid #000;
 }
 
 .label_text {
@@ -86,14 +99,13 @@
   display: block;
   object-fit: cover;
   object-position: center;
-  border-inline:2px solid #000;
   width: 100%;
+  aspect-ratio: 1 /1;
 }
 
 .card_content_container {
   padding: 25px;
   border: 2px solid #000;
-
 }
 
 .card_text_container > .card_text:last-of-type {
@@ -116,16 +128,132 @@
 .card__icon-button {
   border: none;
   background: none;
-  height:36px;
+  height: 36px;
+}
+
+.button {
+  border: 2px solid #000;
+  background: none;
+  font-size: 14px;
+  line-height: 12.6px;
+}
+
+.button__text {
+  font-family: var(--accent-font), fantasy;
+  margin: auto;
+  font-size: 14px;
+  line-height: 12.6px;
 }
 
 .card__like-button {
-  font-family: var(--accent-font);
-  font-size: 14px;
-  line-height: 12.6px;
+  padding: 13px 35px 7px;
+}
+
+/* <---------- image_filter -----------> */
+
+.section_freetrack_image {
+  filter:brightness(120%);
+}
+
+.section_clean_slate_image {
+  filter:saturate(200%)
+}
+
+.section_if_it_fails_image {
+  filter:grayscale(80%);
+}
+
+.section_pursuit_of_perfection_image {
+  filter:contrast(120%);
+}
+
+.section_who_is_around_image {
+  filter:sepia(0.6);
+}
+
+.section_workaround_strategies_image {
+  filter:blur(3px) saturate(180%);
+}
+
+.section_hands_down_image {
+  filter:brightness(105%) contrast(105%) saturate(130%);
+}
+
+.section_im_here_now_image {
+  filter: opacity(80%);
+}
+
+.floppy_button {
+  display: flex;
+  align-items: center;
+  inline-size: clamp(19.375rem, 2.723vw + 18.737rem, 21.188rem);
+  gap: 8px;
+  padding-inline: 19px 21px;
+  padding-block: 15px;
+  margin: auto;
+  background-color: #fff;
+}
+
+.icon-floppy {
+  inline-size: 21px;
+  block-size: 21px;
+}
+
+.dialog[open] {
+  min-inline-size: clamp(21.313rem, 1.502vw + 20.96rem, 22.313rem);
+  inline-size: clamp(21.313rem, 1.502vw + 20.96rem, 22.313rem);
+  padding: 29.5px 30.5px 28.5px 29.5px;
+  border: none;
   border: 2px solid #000;
-  background: none;
-  padding: 11px 35px;
+}
+
+.dialog::backdrop {
+  background-color: rgba(26 26 26 / 0.75);
+}
+
+.dialog_text {
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
-  line-height: 12.6px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.dialog-floppy {
+  min-inline-size: 39px;
+  block-size: 39px;
+}
+
+.dialog_content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.dialog_button {
+  inline-size: 100%;
+  padding:10px 17px;
+  margin-block-start: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media(width<=375px){
+  .header {
+    inline-size: 100%;
+   padding-block: 120px;
+  }
+  .section {
+    inline-size: 100%;
+  }
+  .floppy_button {
+    flex-direction: column;
+  }
+  .icon-floppy {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+  .dialog[open] {
+    padding: 30px 40px;
+  }
+
 }

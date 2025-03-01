@@ -5,7 +5,16 @@
   --weight-title: 700;
   --weight-text: 400;
   --outline-label-color: #ffffff;
-  --background-image: repeating-linear-gradient(90deg, #d3d3d3 0px 2px, rgb(0 0 0 / 0) 2px 4px),
-  repeating-linear-gradient(180deg, #d3d3d3 0px 2px, rgb(0 0 0 / 0) 2px 4px),
-  linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+  --background-image: repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0px 2px,
+      rgb(0 0 0 / 0) 2px 4px
+    ),
+    repeating-linear-gradient(180deg, #d3d3d3 0px 2px, rgb(0 0 0 / 0) 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+  --contour-color: rgba(0, 0, 0, 1);
+  --core-color: rgba(255, 255, 255, 1);
+  --main-body-color: rgba(255, 0, 0, 1);
+  --like-accent: rgba(0, 0, 0, 1);
+  --border: 2px solid #000;
 }

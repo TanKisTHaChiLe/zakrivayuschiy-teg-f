@@ -136,6 +136,7 @@
   font-family: var(--accent-font), fantasy;
   color: #fff;
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
 .button:focus {
@@ -144,7 +145,6 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 0 #000;
-  transition: box-shadow 0.3s ease;
 }
 
 .button::after {
@@ -201,35 +201,35 @@
 
 /* <---------- image_filter -----------> */
 
-.section_freetrack_image {
+.filter_brightness {
   filter: brightness(120%);
 }
 
-.section_clean_slate_image {
+.filter_saturate {
   filter: saturate(200%);
 }
 
-.section_if_it_fails_image {
+.filter_grayscale {
   filter: grayscale(80%);
 }
 
-.section_pursuit_of_perfection_image {
+.filter_contrast {
   filter: contrast(120%);
 }
 
-.section_who_is_around_image {
+.filter_sepia {
   filter: sepia(0.6);
 }
 
-.section_workaround_strategies_image {
+.filter_blur_saturate {
   filter: blur(3px) saturate(180%);
 }
 
-.section_hands_down_image {
+.filter_brightness_contrast_saturate {
   filter: brightness(105%) contrast(105%) saturate(130%);
 }
 
-.section_im_here_now_image {
+.filter_opacity {
   filter: opacity(80%);
 }
 
@@ -321,73 +321,52 @@
 
 .core {
   fill: transparent;
-  transition: fill 0.3s;
+  transition: fill 0.3s 0.03s ease;
 }
 
 .main-body {
   fill: transparent;
-  transition: fill 0.3s 0.05s;
+  transition: fill 0.3s ease;
 }
 
 .contour {
   fill: var(--contour-color);
-  transition: fill 0.3s 0.06s;
+  transition: fill 0.1s linear;
 }
 
 .card__icon-button:hover .core {
   fill: var(--like-accent);
-}
-
-.card__icon-button:not(:hover) .core {
-  transition: fill 0.3s 0.03s;
+  transition: fill 0.3s ease;
 }
 
 .card__icon-button:hover .main-body {
   fill: var(--like-accent);
-}
-
-.card__icon-button:not(:hover) .main-body {
-  transition: fill 0.3s;
+  transition: fill 0.3s 0.05s ease;
 }
 
 .card__icon-button:active .core {
   fill: var(--main-body-color);
-}
-
-.card__icon-button:not(:active) .core {
-  transition: fill 0.3s 0.03s;
+  transition: fill 0.3s ease;
 }
 
 .card__icon-button:active .main-body {
   fill: var(--main-body-color);
-}
-
-.card__icon-button:not(:active) .main_body {
-  transition: fill 0.3s;
+  transition: fill 0.3s 0.05s ease;
 }
 
 .like-icon.is-liked .core {
   fill: var(--main-body-color);
-}
-
-.like-icon:not(.is-liked) .core {
-  transition: fill 0.3s 0.03s;
+  transition: fill 0.3s ease;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--main-body-color);
-}
-
-.like-icon:not(.is-liked) .main-body {
-  transition: fill 0.3s;
-}
-
-.like-icon:not(.is-liked) .contour {
-  transition: fill 0.1s linear;
+  transition: fill 0.3s 0.05s ease;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--main-body-color);
+  transition: fill 0.3s 0.05s ease;
 }
 
 .like-icon.is-liked .heart {
@@ -397,22 +376,4 @@
 
 .like-icon.is-liked .sparks {
   animation: spark 0.3s ease-in 0.3s;
-}
-
-@keyframes scalUp {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.25);
-  }
-}
-
-@keyframes spark {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }

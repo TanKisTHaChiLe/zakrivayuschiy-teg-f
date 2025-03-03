@@ -58,9 +58,9 @@
 }
 
 .section_title {
-  padding: 4.7px 10px;
+  padding: 4.5px 10px;
   border: var(--border);
-  font-weight: var(--weight-title);
+  font-variation-settings: "wght" var(--weight-title);
   font-size: 18px;
   line-height: 21.78px;
 }
@@ -301,6 +301,10 @@
   }
   .section {
     inline-size: 100%;
+  }
+  .label_text {
+    right: 12px;
+    top:23px;
   }
   .floppy_button {
     flex-direction: column;
